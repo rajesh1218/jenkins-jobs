@@ -1,0 +1,35 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/webapp
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/rajesh1218/webapp.git
+ > git init /var/lib/jenkins/workspace/webapp # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/webapp.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/webapp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/rajesh1218/webapp.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 0dcb319d18d77b70fa0b06d354ab2d14fa0af613 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0dcb319d18d77b70fa0b06d354ab2d14fa0af613 # timeout=10
+Commit message: "index.html added"
+First time build. Skipping changelog.
+[webapp] $ /bin/sh -xe /tmp/jenkins14920615542923044871.sh
++ sudo rm -rf webapp
++ git clone https://github.com/rajesh1218/webapp.git
+Cloning into 'webapp'...
++ cd webapp
++ ls
+README.md
++ pwd
+/var/lib/jenkins/workspace/webapp/webapp
++ cp -rvf README.md /var/www/html
+‘README.md’ -> ‘/var/www/html/README.md’
+cp: cannot create regular file ‘/var/www/html/README.md’: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

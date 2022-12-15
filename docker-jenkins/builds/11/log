@@ -1,0 +1,46 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/docker-jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/docker-jenkins/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rajesh1218/dcokerjenkins.git # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/dcokerjenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/dcokerjenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 5bdc6a3a6be4efb62be37c2b3a9e7c8249edcbcb (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5bdc6a3a6be4efb62be37c2b3a9e7c8249edcbcb # timeout=10
+Commit message: "Create index.html"
+ > git rev-list --no-walk d9ee13202b9be48205bfd38a936b551cb760cc89 # timeout=10
+[docker-jenkins] $ /bin/sh -xe /tmp/jenkins18029048214291304321.sh
++ sudo rm -rf dcokerjenkins/
++ git clone https://github.com/rajesh1218/dcokerjenkins.git
+Cloning into 'dcokerjenkins'...
++ cd dcokerjenkins
++ ls
+Dockerfile
+index.html
+[docker-jenkins] $ docker build -t rajesh1218/dockerjenkins --pull=true /var/lib/jenkins/workspace/docker-jenkins
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Sending build context to Docker daemon    107kB
+Step 1/7 : FROM ubuntu:22.04
+22.04: Pulling from library/ubuntu
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Image is up to date for ubuntu:22.04
+ ---> 6b7dfa7e8fdb
+Step 2/7 : RUN apt-get update -y
+ ---> Using cache
+ ---> 4658654247fd
+Step 3/7 : RUN apt-get install apache2 -y
+ ---> Using cache
+ ---> f4ce8047f04c
+Step 4/7 : COPY index.html /var/www/html/index.html
+ ---> 03b4691cc7b7
+Step 5/7 : COPY service.sh /root/service.sh
+COPY failed: file not found in build context or excluded by .dockerignore: stat service.sh: file does not exist
+Build step 'Docker Build and Publish' marked build as failure
+Finished: FAILURE

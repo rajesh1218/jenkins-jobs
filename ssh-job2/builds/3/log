@@ -1,0 +1,52 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/ssh-job2
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ssh-job2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rajesh1218/webapp.git # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/webapp.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/webapp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 0500141b2654623c429c7c520210b6d35c80dc09 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0500141b2654623c429c7c520210b6d35c80dc09 # timeout=10
+Commit message: "Update index.html"
+ > git rev-list --no-walk 0500141b2654623c429c7c520210b6d35c80dc09 # timeout=10
+[SSH] script:
+
+sudo rm -rf webapp
+git clone https://github.com/rajesh1218/webapp.git
+cd webapp
+ls
+pwd
+sudo cp -rvf * /var/www/html
+sudo ls /home/student
+sudo touch /home/student/abc.txt
+
+[SSH] executing...
+Cloning into 'webapp'...
+index.html
+/home/student/webapp
+‘index.html’ -> ‘/var/www/html/index.html’
+abc.txt
+Desktop
+details
+Documents
+Downloads
+hosts
+Music
+Pictures
+Public
+Templates
+varible_group
+Videos
+webapp
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

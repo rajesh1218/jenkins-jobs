@@ -1,0 +1,74 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/docker-jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/docker-jenkins/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rajesh1218/dcokerjenkins.git # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/dcokerjenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/dcokerjenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 2c58f1ad8e44f6b9e32dc670c470e613fc7a31e5 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2c58f1ad8e44f6b9e32dc670c470e613fc7a31e5 # timeout=10
+Commit message: "Create service.sh"
+ > git rev-list --no-walk 5bdc6a3a6be4efb62be37c2b3a9e7c8249edcbcb # timeout=10
+[docker-jenkins] $ /bin/sh -xe /tmp/jenkins3196052567041533788.sh
++ sudo rm -rf dcokerjenkins/
++ git clone https://github.com/rajesh1218/dcokerjenkins.git
+Cloning into 'dcokerjenkins'...
++ cd dcokerjenkins
++ ls
+Dockerfile
+index.html
+service.sh
+[docker-jenkins] $ docker build -t rajesh1218/dockerjenkins --pull=true /var/lib/jenkins/workspace/docker-jenkins
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Sending build context to Docker daemon  118.8kB
+Step 1/7 : FROM ubuntu:22.04
+22.04: Pulling from library/ubuntu
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Image is up to date for ubuntu:22.04
+ ---> 6b7dfa7e8fdb
+Step 2/7 : RUN apt-get update -y
+ ---> Using cache
+ ---> 4658654247fd
+Step 3/7 : RUN apt-get install apache2 -y
+ ---> Using cache
+ ---> f4ce8047f04c
+Step 4/7 : COPY index.html /var/www/html/index.html
+ ---> Using cache
+ ---> 03b4691cc7b7
+Step 5/7 : COPY service.sh /root/service.sh
+ ---> d7233de0bb69
+Step 6/7 : EXPOSE 80
+ ---> Running in 2b37435f3ccd
+Removing intermediate container 2b37435f3ccd
+ ---> 2b01da13ac49
+Step 7/7 : ENTRYPOINT /root/service.sh ; /bin/bash
+ ---> Running in 2e05759c6fff
+Removing intermediate container 2e05759c6fff
+ ---> 31aeba0b0364
+Successfully built 31aeba0b0364
+Successfully tagged rajesh1218/dockerjenkins:latest
+[docker-jenkins] $ docker inspect 31aeba0b0364
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+[docker-jenkins] $ docker push rajesh1218/dockerjenkins
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Using default tag: latest
+The push refers to repository [docker.io/rajesh1218/dockerjenkins]
+9efb1a20b377: Preparing
+71299418a7b1: Preparing
+337d652aa71b: Preparing
+ccc68e212732: Preparing
+6515074984c6: Preparing
+6515074984c6: Mounted from library/ubuntu
+71299418a7b1: Pushed
+9efb1a20b377: Pushed
+337d652aa71b: Pushed
+ccc68e212732: Pushed
+latest: digest: sha256:f04db20a575b24916e44ccf2f45e949669c4e7800278b3ae5ef1499caf5e2e01 size: 1367
+Finished: SUCCESS

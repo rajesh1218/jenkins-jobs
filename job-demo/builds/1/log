@@ -1,0 +1,11 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job-demo
+[job-demo] $ /bin/sh -xe /tmp/jenkins628469317824395759.sh
++ pwd
+/var/lib/jenkins/workspace/job-demo
++ mkdir job-demo
++ ls -l
+total 0
+drwxr-xr-x. 2 jenkins jenkins 6 Dec 13 19:54 job-demo
+Finished: SUCCESS

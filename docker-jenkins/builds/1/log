@@ -1,0 +1,29 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/docker-jenkins
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/rajesh1218/dcokerjenkins.git
+ > git init /var/lib/jenkins/workspace/docker-jenkins # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/dcokerjenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/dcokerjenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/rajesh1218/dcokerjenkins.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision d9ee13202b9be48205bfd38a936b551cb760cc89 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d9ee13202b9be48205bfd38a936b551cb760cc89 # timeout=10
+Commit message: "Create Dockerfile"
+First time build. Skipping changelog.
+[docker-jenkins] $ /bin/sh -xe /tmp/jenkins330897948537337142.sh
++ sudo rm -rf dockerjenkins/
++ git clone https://github.com/rajesh1218/dcokerjenkins.git
+Cloning into 'dcokerjenkins'...
++ cd dockerjenkins
+/tmp/jenkins330897948537337142.sh: line 4: cd: dockerjenkins: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

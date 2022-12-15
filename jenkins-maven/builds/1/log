@@ -1,0 +1,30 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jenkins-maven
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/rajesh1218/mavenrepo.git
+ > git init /var/lib/jenkins/workspace/jenkins-maven # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/mavenrepo.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/mavenrepo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/rajesh1218/mavenrepo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 175dd2ad48d0d34d1f5b7e1ac162e170c5c720e8 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 175dd2ad48d0d34d1f5b7e1ac162e170c5c720e8 # timeout=10
+Commit message: "webapp added"
+First time build. Skipping changelog.
+[jenkins-maven] $ /bin/sh -xe /tmp/jenkins8257339661553024588.sh
++ sudo rm -rf mavenrepo
++ git clone https://github.com/rajesh1218/mavenrepo.git
+Cloning into 'mavenrepo'...
++ cd mavenrepo
+Parsing POMs
+ERROR: No such file /var/lib/jenkins/workspace/jenkins-maven/pom.xml
+Perhaps you need to specify the correct POM file path in the project configuration?
+Finished: FAILURE

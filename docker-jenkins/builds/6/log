@@ -1,0 +1,30 @@
+Started by user [8mha:////4IDddbaNLOUlhDWOByPQW70fOvW7y0LObS4JiZSmWN5TAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/docker-jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/docker-jenkins/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rajesh1218/dcokerjenkins.git # timeout=10
+Fetching upstream changes from https://github.com/rajesh1218/dcokerjenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/rajesh1218/dcokerjenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision d9ee13202b9be48205bfd38a936b551cb760cc89 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d9ee13202b9be48205bfd38a936b551cb760cc89 # timeout=10
+Commit message: "Create Dockerfile"
+ > git rev-list --no-walk d9ee13202b9be48205bfd38a936b551cb760cc89 # timeout=10
+[docker-jenkins] $ /bin/sh -xe /tmp/jenkins7017341062759690272.sh
++ sudo rm -rf dcokerjenkins/
++ git clone https://github.com/rajesh1218/dcokerjenkins.git
+Cloning into 'dcokerjenkins'...
++ cd dcokerjenkins
++ ls
+Dockerfile
+[docker-jenkins] $ docker build -t rajesh1218/dockerjenkins --pull=true /var/lib/jenkins/workspace/docker-jenkins
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&pull=1&rm=1&shmsize=0&t=rajesh1218%2Fdockerjenkins&target=&ulimits=null&version=1": dial unix /var/run/docker.sock: connect: permission denied
+Build step 'Docker Build and Publish' marked build as failure
+Finished: FAILURE
